@@ -1,0 +1,12 @@
+objective:
+  - TV[data_fit=lsq,isotropy=isotropic,reg=0.02]
+  - TV[data_fit=lsq,isotropy=isotropic,reg=1]
+dataset:
+  - chateau[type_A=inpainting]
+  - chateau[type_A=denoising]
+solver:
+  - ADMM[gamma=0.5]
+  - Chambolle-Pock[tau_mult=0.9,gamma=0.35]
+  - Condat-Vu[tau_mult=0.5,gamma=1]
+  - Douglas-Rachford[gamma=1]
+  - Forward-Backward[gamma_mult=0.5]
